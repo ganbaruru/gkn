@@ -730,7 +730,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "return\u30AD\u30FC\u3067\u306F\u3058\u3081\u306B\u623B\u308B"
+  m_Text: "Shift\u30AD\u30FC\u3067\u306F\u3058\u3081\u306B\u623B\u308B"
 --- !u!222 &759060122
 CanvasRenderer:
   m_ObjectHideFlags: 0

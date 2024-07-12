@@ -14,7 +14,7 @@ public class batu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(bpm100.sinmaok);
+        //Debug.Log(bpm100.sinmaok);
         if(bpm100.sinmaok){
 
             ookisa=this.transform.position;//ugokuに現在の位置を代入

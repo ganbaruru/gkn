@@ -46,6 +46,7 @@ public class bpm100 : MonoBehaviour
             ookisa = transform.localScale; // ローカル変数に格納
             ookisa.x += 0.1f;
             ookisa.y += 0.1f;
+            Debug.Log(ookisa);
             transform.localScale = ookisa;
             riseok = true;
 
@@ -66,7 +67,7 @@ public class bpm100 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(SerialReceive.data);
+        //Debug.Log(SerialReceive.data);
         
         if (Input.GetKey(KeyCode.Return) && sinmaok || sinmaok && SerialReceive.data==1)//retirnキーが押されれるor心マされた時sinmaokの時
         {

@@ -22,10 +22,10 @@ public class jikan : MonoBehaviour
     void Update()
     {
         
-        //if(Input.GetKey(KeyCode.DownArrow)){
-            //debag+=1f;
-          //  Debug.Log(debag);
-        //}
+        if(Input.GetKey(KeyCode.Tab)){
+            debag+=1f;
+            Debug.Log(debag);
+        }
         int jikan =(int)Time.realtimeSinceStartup;
         int nokori=(int)(100-jikan+hajime-debag);
         gameObject.GetComponent<Text>().text = "残り時間;" + nokori +"秒";

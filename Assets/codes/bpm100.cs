@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+
 //using JetBrains.Rider.Unity.Editor;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -18,7 +20,8 @@ public class bpm100 : MonoBehaviour
     bool riseok;
     public static bool sinmaok;
     float sinmadametime;
-
+    [SerializeField] private int matikazu;
+    public static bool sinmaokok;
     void Start()
     {
         Time.timeScale = 5 / 3f;
@@ -31,6 +34,7 @@ public class bpm100 : MonoBehaviour
         last = 0.0f;
         riseok = false;
         sinmaok = true;
+        sinmaokok=true;
     }
 
     void sinma()
@@ -98,7 +102,7 @@ public class bpm100 : MonoBehaviour
             }
             //Debug.Log("%100=20");
         }
-        if (Time.realtimeSinceStartup - last >= 10 && riseok)
+        if (Time.realtimeSinceStartup - last >= matikazu && riseok)
         {
             timerise = transform.localScale; // ローカル変数に格納
             timerise.x = 0.2f;
@@ -106,14 +110,15 @@ public class bpm100 : MonoBehaviour
             transform.localScale = timerise;
             riseok = false;
         }
-        if (sinmaok != true)
+        if (sinmaok != true&&sinmaokok)
         {
-
+            sinmaokok=false;
             sinmadametime = Time.realtimeSinceStartup;
         }
-        if (Time.realtimeSinceStartup - sinmadametime >= 10 && sinmaok != true)
+        if (Time.realtimeSinceStartup - sinmadametime >= matikazu && sinmaok != true)
         {
             sinmaok = true;
+            sinmaokok=true;
 
         }
     }

@@ -19,6 +19,7 @@ public class owarisc : MonoBehaviour
             bpm100.taiminngu=false;
             bpm100.haato=0;
             bpm100.sinmaok=true;
+            bpm100.sinmaokok=true;
             dameji.damejiok=false;
             dameji.ldie=1;
             dameji.mdie=1;

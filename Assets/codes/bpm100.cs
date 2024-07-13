@@ -22,6 +22,7 @@ public class bpm100 : MonoBehaviour
     float sinmadametime;
     [SerializeField] private int matikazu;
     public static bool sinmaokok;
+    bool a,b;
     void Start()
     {
         Time.timeScale = 5 / 3f;
@@ -35,10 +36,13 @@ public class bpm100 : MonoBehaviour
         riseok = false;
         sinmaok = true;
         sinmaokok=true;
+        a=true;
+        b=false;
     }
 
     void sinma()
     {
+        
         if (taiminngu)
         {
             last = Time.realtimeSinceStartup;
@@ -67,6 +71,10 @@ public class bpm100 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(a&&b==false){
+            //Debug.Log("1");
+            debugtxt.dtxt=true;
+        }
         //Debug.Log(SerialReceive.data);
         
         if (Input.GetKey(KeyCode.Return) && sinmaok || sinmaok && SerialReceive.data==1)//retirnキーが押されれるor心マされた時sinmaokの時

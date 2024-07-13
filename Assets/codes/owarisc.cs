@@ -34,6 +34,7 @@ public class owarisc : MonoBehaviour
             spown.mspo=1;
             spown.rspo=1;
             kill=true;
+            
             SceneManager.LoadScene("Title");
         }
     }

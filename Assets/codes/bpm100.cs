@@ -36,8 +36,6 @@ public class bpm100 : MonoBehaviour
         riseok = false;
         sinmaok = true;
         sinmaokok=true;
-        a=true;
-        b=false;
     }
 
     void sinma()
@@ -71,10 +69,7 @@ public class bpm100 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(a&&b==false){
-            //Debug.Log("1");
-            debugtxt.dtxt=true;
-        }
+        
         //Debug.Log(SerialReceive.data);
         
         if (Input.GetKey(KeyCode.Return) && sinmaok || sinmaok && SerialReceive.data==1)//retirnキーが押されれるor心マされた時sinmaokの時
@@ -90,7 +85,7 @@ public class bpm100 : MonoBehaviour
                 ookisa.x += 0.05f;
                 ookisa.y += 0.05f;
                 transform.localScale = ookisa;
-
+                debugtxt.dtxt=true;
                 taiminngu = true;
                 ok = false;
                 //Debug.Log("%100=0");

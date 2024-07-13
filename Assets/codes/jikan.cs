@@ -10,6 +10,7 @@ public class jikan : MonoBehaviour
 {
     float hajime;
     float debag;
+    [SerializeField] private int ge_mujikan;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class jikan : MonoBehaviour
             Debug.Log(debag);
         }
         int jikan =(int)Time.realtimeSinceStartup;
-        int nokori=(int)(100-jikan+hajime-debag);
+        int nokori=(int)(ge_mujikan-jikan+hajime-debag);
         gameObject.GetComponent<Text>().text = "残り時間;" + nokori +"秒";
         if(nokori<0){
             SceneManager.LoadScene("owari");

@@ -16,6 +16,6 @@ public class owapoint : MonoBehaviour
     void Update()
     {
         opoint=points.point;
-        gameObject.GetComponent<Text>().text = "助けた人数; " + opoint +"人";//textを変更する
+        gameObject.GetComponent<Text>().text = "助けた人数: " + opoint +"人";//textを変更する
     }
 }

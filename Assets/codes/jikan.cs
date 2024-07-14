@@ -29,7 +29,7 @@ public class jikan : MonoBehaviour
         }
         int jikan =(int)Time.realtimeSinceStartup;
         int nokori=(int)(ge_mujikan-jikan+hajime-debag);
-        gameObject.GetComponent<Text>().text = "残り時間;" + nokori +"秒";
+        gameObject.GetComponent<Text>().text = "残り時間:" + nokori +"秒";
         if(nokori<0){
             SceneManager.LoadScene("owari");
         }

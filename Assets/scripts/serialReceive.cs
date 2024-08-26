@@ -6,7 +6,7 @@ public class SerialReceive : MonoBehaviour
 {
     public SerialHandler serialHandler;
 
-    public static int data;//おされてるかどうかのboolとしてのint
+    public static string data;//おされてるかどうかのboolとしてのint
     void Start()
     {
         //信号を受信したときに、そのメッセージの処理を行う
@@ -16,7 +16,7 @@ public class SerialReceive : MonoBehaviour
     //受信した信号(message)に対する処理
     void OnDataReceived(string message)
     {
-        data = int.Parse(message);
+        data=message;
         try
         {
             // Debug.Log(data);//Unityのコンソールに受信データを表示

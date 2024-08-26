@@ -10,6 +10,9 @@ using UnityEngine.Rendering;
 
 public class bpm100 : MonoBehaviour
 {
+    //追加要so
+      public SerialReceive SerialReceive;
+     
     // Start is called before the first frame update
      Vector3 ookisa;//大きさを変更するための一時的なvec3
      Vector3 timerise;//心マを初期に戻すためのvec3
@@ -21,9 +24,11 @@ public class bpm100 : MonoBehaviour
      public static bool sinmaok;
      float sinmadametime;
      bool sinmafalseok;
-    
+
+     
     void Start()
     {
+        
         Time.timeScale = 5/3f;
         haato=0;
         sinmafalseok=true;
@@ -63,7 +68,9 @@ public class bpm100 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Return)&&sinmaok){
+        int getdata;
+        int.TryParse(SerialReceive.data, out getdata);
+        if(Input.GetKey(KeyCode.Return)||getdata == 1){
             sinma();
         }
         //Debug.Log(Time.time);
